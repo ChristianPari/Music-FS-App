@@ -24,4 +24,4 @@ This application will mimic a music website downloader; unsure if I will integra
 ## Project Timeline
 ### June 18, 2020
 #### 7:30pm
-Installed neccessary dependencies and created starting files and folders
+Installed neccessary dependencies and created starting files and folders 

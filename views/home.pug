@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+html(lang="en")
+
+    head
+
+        meta(charset="UTF-8")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+
+        style
+            include ../public/home.css
+        script
+            include ../public/home.js
+
+        title Music Site
+
+    body
+
+        h1#mainHead Music Streaming Mimic Site
+
+        //- #navBarDiv
+        //-     ul#navBar
+        //-         li#navSong Songs
+        //-         li#navAlbums Albums
+        //-         li#navArtists Artists
+
+        #searchDiv
+            input#query(placeholder='Song, Artist, or Album')
+            button#searchBtn Search
+        
+        #dataDisplay
+            table(style='width:100%')
+                th Artist
+                th Song Title
+                th Preview
+                each song in all_songs
+                        tr
+                            td.artists
+                                a(href=' ')=song.artists[0]
+                            td.titles
+                                a(href=' ')=song.title
+                            td.previews
+                                audio.players(controls='')
+                                    source(src=song.preview, type="audio/mpeg")

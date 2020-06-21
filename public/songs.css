@@ -1,0 +1,20 @@
+body {
+    text-align: center;
+}
+
+#searchDiv {
+    padding: 5px;
+}
+
+#dataDisplay {
+    margin-top: 35px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+.entries {
+    border: solid;
+    margin-bottom: 5px;
+}

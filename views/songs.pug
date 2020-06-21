@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+html(lang="en")
+
+    head
+
+        meta(charset="UTF-8")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+
+        style
+            include ../public/songs.css
+        script
+            include ../public/songs.js
+
+        title All Songs
+
+    body
+
+        h1#mainHead All Songs
+
+        #search
+            input#query(placeholder='Song, Artist, or Album')
+            button#searchBtn Search
+        
+        #dataDisplay
+            each song in all_songs
+                .entries
+                    h3.artists
+                        a(href="")=song.artists[0]
+                    h3.titles
+                        a(href="")=song.title
+                    h3.previews
+                        audio.players(controls='')
+                            source(src=song.preview, type="audio/mpeg")
+    

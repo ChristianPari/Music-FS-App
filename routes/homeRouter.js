@@ -1,12 +1,17 @@
 const express = require('express'),
-    router = express.Router(),
-    Song = require('../models/Song');
+    router = express.Router();
 
-router.get('/', async(req, res) => {
+router.get('/', (req, res) => {
 
-    const allSongs = await Song.find({});
+    const songsLink = `http://localhost:${process.env.PORT}/songs`,
+        albumsLink = '',
+        artistsLink = '';
 
-    res.render('home', { all_songs: allSongs });
+    res.render('home', {
+        songs_link: songsLink,
+        albums_link: albumsLink,
+        artists_link: artistsLink
+    });
 
 });
 

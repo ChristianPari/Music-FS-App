@@ -17,27 +17,17 @@ html(lang="en")
 
         h1#mainHead Music Streaming Mimic Site
 
-        //- #navBarDiv
-        //-     ul#navBar
-        //-         li#navSong Songs
-        //-         li#navAlbums Albums
-        //-         li#navArtists Artists
+        #navBarDiv
+            ul#navBar
+                li#navSong
+                    a(href=songs_link) Songs
+                li#navAlbums
+                    a(href=albums_link) Albums
+                li#navArtists
+                    a(href=artists_link) Artists
 
-        #searchDiv
-            input#query(placeholder='Song, Artist, or Album')
-            button#searchBtn Search
-        
-        #dataDisplay
-            table(style='width:100%')
-                th Artist
-                th Song Title
-                th Preview
-                each song in all_songs
-                        tr
-                            td.artists
-                                a(href=' ')=song.artists[0]
-                            td.titles
-                                a(href=' ')=song.title
-                            td.previews
-                                audio.players(controls='')
-                                    source(src=song.preview, type="audio/mpeg")
+        #websiteDescr
+            h2#what What can you do?
+            p Look up songs, artists, albums, and create playlists!
+            h2#how How?
+            p Simply select a tab above and you will be taken to the designated page to search through our music database!

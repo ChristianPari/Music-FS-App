@@ -4,6 +4,7 @@ const express = require('express'),
     app = express(),
     port = process.env.PORT || 5000,
     dbConnect = require('./dbConnection'),
+    adminRouter = require('./routes/adminRouter'),
     homeRouter = require('./routes/homeRouter'),
     songsRouter = require('./routes/songRouter');
 
@@ -15,6 +16,7 @@ app.use(express.json());
 dbConnect();
 
 app.use('/', homeRouter);
+app.use('/admin', adminRouter);
 app.use('/songs', songsRouter);
 
 app.listen(port, () => { console.log(`\nListening on port: ${port}`); });

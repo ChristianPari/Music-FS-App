@@ -1,7 +1,7 @@
 {
     "name": "music-fs-app",
     "version": "1.0.0",
-    "description": "This application will mimic a music website downloader",
+    "description": "This application will mimic a music streaming website",
     "main": "app.js",
     "scripts": {
         "start": "node app.js",

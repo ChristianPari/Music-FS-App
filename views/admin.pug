@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+html(lang="en")
+
+    head
+
+        meta(charset="UTF-8")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+
+        title Admin Page
+
+        script
+            include ../public/admin.js
+
+    body
+
+        mixin songInputs
+            input#track_id(type="number", placeholder="Song ID")
+            input#title(type="text", placeholder="Song Title")
+            input#release(type="number", placeholder="Release")
+            input#artists(type="text", placeholder="Artists")
+            input#lyrics(type="text", placeholder="Lyrics")
+            input#album(type="text", placeholder="Album")
+            input#preview(type="text", placeholder="Preview")
+
+        h1 Admin Page
+
+        #songs
+
+            #songCreate
+                h3 Add Song    
+                +songInputs
+                button#newSong Execute
+
+            #songPatch
+                h3 Update Song    
+                +songInputs
+                button#updateSong Execute
+
+            #songDelete
+                h3 Delete Song    
+                input#track_id(type="number", placeholder="Song ID")
+                button#deleteSong Execute
+
+        #albums
+
+            #albumCreate
+                h3 Add Album
+
+            #albumPatch
+                h3 Update Album    
+
+            #albumDelete
+                h3 Delete Album    
+
+
+        #artists
+
+            #artistCreate
+                h3 Add Artist    
+
+            #artistPatch
+                h3 Update Artist    
+
+            #artistDelete
+                h3 Delete Artist    
+

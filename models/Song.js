@@ -12,8 +12,8 @@ const mongoose = require('mongoose'),
             type: Number,
             required: true
         },
-        artists: {
-            type: [Array],
+        artist: {
+            type: String,
             required: true
         },
         lyrics: {

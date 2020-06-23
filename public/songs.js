@@ -11,7 +11,7 @@ function displayResults() {
     const input = document.getElementById('query').value.trim().toLowerCase().replace(/\s+/g, ""),
         filterRegExp = new RegExp(input, 'g'),
         titles = document.getElementsByClassName('titles'),
-        artists = document.getElementsByClassName('artists');
+        artist = document.getElementsByClassName('artist');
 
     for (let a = 0; a < Object.keys(titles).length; a++) {
 
@@ -20,9 +20,9 @@ function displayResults() {
             titles[a].parentNode.style.display = 'none';
 
         }
-        if (!filterRegExp.test(artists[a].childNodes[0].innerText.trim().toLowerCase().replace(/\s+/g, ""))) {
+        if (!filterRegExp.test(artist[a].childNodes[0].innerText.trim().toLowerCase().replace(/\s+/g, ""))) {
 
-            artists[a].parentNode.style.display = 'none';
+            artist[a].parentNode.style.display = 'none';
 
         }
         if (filterRegExp.test(titles[a].childNodes[0].innerText.trim().toLowerCase().replace(/\s+/g, ""))) {
@@ -30,9 +30,9 @@ function displayResults() {
             titles[a].parentNode.style.display = 'inline';
 
         }
-        if (filterRegExp.test(artists[a].childNodes[0].innerText.trim().toLowerCase().replace(/\s+/g, ""))) {
+        if (filterRegExp.test(artist[a].childNodes[0].innerText.trim().toLowerCase().replace(/\s+/g, ""))) {
 
-            artists[a].parentNode.style.display = 'inline';
+            artist[a].parentNode.style.display = 'inline';
 
         }
 

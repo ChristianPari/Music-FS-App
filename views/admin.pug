@@ -14,13 +14,13 @@ html(lang="en")
     body
 
         mixin songInputs
-            input#track_id(type="number", placeholder="Song ID")
-            input#title(type="text", placeholder="Song Title")
-            input#release(type="number", placeholder="Release")
-            input#artists(type="text", placeholder="Artists")
-            input#lyrics(type="text", placeholder="Lyrics")
-            input#album(type="text", placeholder="Album")
-            input#preview(type="text", placeholder="Preview")
+            input.track_id(type="string", placeholder="Song ID")
+            input.title(type="text", placeholder="Song Title")
+            input.release(type="number", placeholder="Release")
+            input.artist(type="text", placeholder="Artists")
+            input.lyrics(type="text", placeholder="Lyrics")
+            input.album(type="text", placeholder="Album")
+            input.preview(type="text", placeholder="Preview")
 
         h1 Admin Page
 
@@ -32,14 +32,15 @@ html(lang="en")
                 button#newSong Execute
 
             #songPatch
-                h3 Update Song    
+                h3 Update Song
+                input#upSongID(type="string", placeholder="Document ID")
                 +songInputs
                 button#updateSong Execute
 
             #songDelete
                 h3 Delete Song    
-                input#track_id(type="number", placeholder="Song ID")
-                button#deleteSong Execute
+                input#delSongID(type="string", placeholder="Document ID")
+                button#removeSong Execute
 
         #albums
 
